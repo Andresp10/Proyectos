@@ -1,0 +1,43 @@
+﻿@model FinalASP.Models.Cliente
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="col-md-10 col-md-offset-1">
+    <div class="card card-raised">
+        <div class="header header-primary text-left">
+            <h5 style="margin-left:30px;margin-bottom:5px;">Eliminar Usuario</h5>
+            <small style="margin-left:30px;margin-top:1px;">¿Seguro que desea eliminar al Usuario?</small>
+        </div>
+        <div class="content col-md-10 col-md-offset-1">
+
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Email)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Email)
+                </dd>
+
+            </dl>
+
+        </div>
+        <div>
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="footer text-center col-md-offset-8" style="padding-bottom:20px;">
+                    <a href="/Clientes" class="btn btn-default">Volver</a>
+                    <button class="btn btn-danger" value="Delete" type="submit">Eliminar<div class="ripple-container"></div></button>
+                </div>
+            }
+        </div>
+
+    </div>
+</div>
+

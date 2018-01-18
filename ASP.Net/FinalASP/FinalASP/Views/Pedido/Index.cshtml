@@ -1,0 +1,125 @@
+﻿@model IEnumerable<FinalASP.Models.Pedido>
+
+@{
+    ViewBag.Title = "Listado de pedidos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="col-md-10 col-md-offset-1">
+    <div class="card card-raised">
+        <div class="header header-primary text-left">
+            <h5 style="margin-left:30px;margin-bottom:5px;">Listado de pedidos</h5>
+            <a href="/Pedido/Create" class="btn-tooltip pull-right">
+                <i data-toggle="tooltip" data-placement="right" title="" data-container="body" data-original-title="Nuevo" class="material-icons btn-tooltip" style="color:#ecf0f1;font-size:50px;margin-top:-60px;margin-right:20px;">add_circle</i>
+                <div class="ripple-container"></div>
+            </a>
+        </div>
+        <div class="content col-md-10 col-md-offset-1">
+
+            <table class="table" id="example">
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Estado)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Direccion)
+                        </th>
+                        <th>
+                            Productos
+                        </th>
+                        <th>
+                            Cliente
+                        </th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+            {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Estado)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Direccion)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Productos)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Cliente1.Email)
+                            </td>
+                            <td>
+                                <a href="@Url.Action("Edit", "Pedido", new { id = item.idPedido })" class="btn-tooltip">
+                                    <i data-toggle="tooltip" data-placement="bottom" title="" data-container="body" data-original-title="Editar" class="material-icons btn-tooltip" style="color:#3498db">create</i>
+                                    <div class="ripple-container"></div>
+                                </a> |
+                                <!--<a href="@Url.Action("Details", "Pedido", new { id = item.idPedido })" class="btn-tooltip">
+                                    <i data-toggle="tooltip" data-placement="bottom" title="" data-container="body" data-original-title="Ver" class="material-icons btn-tooltip" style="color:#27ae60">visibility</i>
+                                    <div class="ripple-container"></div>
+                                </a> |-->
+                                <a href="@Url.Action("Delete", "Pedido", new { id = item.idPedido })" class="btn-tooltip">
+                                    <i data-toggle="tooltip" data-placement="bottom" title="" data-container="body" data-original-title="Eliminar" class="material-icons btn-tooltip" style="color:#f33c29">delete</i>
+                                    <div class="ripple-container"></div>
+                                </a>
+
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready( function () {
+        $('#example').DataTable();
+    } );
+</script>
+
+<!--
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Estado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Direccion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Productos)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cliente1.Email)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Estado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Direccion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Productos)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cliente1.Email)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idPedido }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idPedido }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idPedido })
+        </td>
+    </tr>
+}
+
+</table>-->

@@ -1,0 +1,127 @@
+﻿@model FinalASP.Models.Pedido
+
+@{
+    ViewBag.Title = "Editar Pedido";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="col-md-10 col-md-offset-1">
+    <div class="card card-raised">
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            <div class="header header-primary text-left">
+                <h5 style="margin-left:30px;margin-bottom:5px;">Editar Pedido</h5>
+                <small style="margin-left:30px;margin-top:1px;">Complete los campos</small>
+            </div>
+            <div class="content col-md-10 col-md-offset-1">
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <i class="material-icons">directions</i>
+                    </span>
+                    <div class="form-group is-empty">
+                        <select class="form-control">
+                            <option value="Solicitado">Solicitado</option>
+                            <option value="Entregado">Entregado</option>
+                            <option value="Cancelado">Cancelado</option>
+                        </select>
+                        @*@Html.EditorFor(model => model.Estado, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Estado, "", new { @class = "text-danger" })*@
+                        <span class="material-input"></span>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <i class="material-icons">directions</i>
+                    </span>
+                    <div class="form-group is-empty">
+                        @Html.EditorFor(model => model.Direccion, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Direccion, "", new { @class = "text-danger" })
+                        <span class="material-input"></span>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <i class="material-icons">timer</i>
+                    </span>
+                    <div class="form-group is-empty">
+                        <input disabled class="form-control text-box single-line" data-val="true" data-val-required="Agregue productos" id="Productos" name="Productos" placeholder="Productos" type="text" value="@Html.DisplayFor(model => model.Productos)">
+                        <span class="field-validation-valid text-danger" data-valmsg-for="Productos" data-valmsg-replace="true"></span>
+                        <span class="material-input"></span>
+                    </div>
+                </div>
+                <div class="input-group" style="display:none">
+                    <span class="input-group-addon">
+                        <i class="material-icons">directions</i>
+                    </span>
+                    <div class="form-group is-empty">
+                        @Html.DropDownList("Cliente", null, htmlAttributes: new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Cliente, "", new { @class = "text-danger" })
+                        <span class="material-input"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer text-center col-md-offset-6" style="padding-bottom:20px;">
+                <a href="/Pedido" class="btn btn-default">Volver</a>
+                <button class="btn btn-warning" value="Save" type="submit">Editar<div class="ripple-container"></div></button>
+            </div>
+        }
+    </div>
+</div>
+@*
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <h4>Pedido</h4>
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @Html.HiddenFor(model => model.idPedido)
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Estado, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Estado, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Estado, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Direccion, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Direccion, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Direccion, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Productos, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Productos, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Productos, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Cliente, "Cliente", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownList("Cliente", null, htmlAttributes: new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.Cliente, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Save" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    }
+
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+*@

@@ -1,0 +1,124 @@
+﻿@model IEnumerable<FinalASP.Models.Producto>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="col-md-10 col-md-offset-1">
+    <div class="card card-raised">
+        <div class="header header-primary text-left">
+            <h5 style="margin-left:30px;margin-bottom:5px;">Listado de Productos</h5>
+            <a href="/Productoes/Create" class="btn-tooltip pull-right">
+                <i data-toggle="tooltip" data-placement="right" title="" data-container="body" data-original-title="Nuevo" class="material-icons btn-tooltip" style="color:#ecf0f1;font-size:50px;margin-top:-60px;margin-right:20px;">add_circle</i>
+                <div class="ripple-container"></div>
+            </a>
+        </div>
+        <div class="content col-md-10 col-md-offset-1">
+
+            <table class="table display" id="example">
+                <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Referencia)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Nombre)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Precio)
+                    </th>
+                    <th>
+                        Nit del proveedor
+                    </th>
+                    <th>Acciones</th>
+                </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+            {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Referencia)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Nombre)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Precio)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Proveedor1.Nombre)
+                            </td>
+                            <td>
+                                <a href="@Url.Action("Edit", "Productoes", new { id = item.idProducto })" class="btn-tooltip" data-toggle="tooltip" data-placement="bottom" title="" data-container="body" data-original-title="Editar">
+                                    <i class="material-icons" style="color:#3498db">create</i>
+                                    <div class="ripple-container"></div>
+                                </a> |
+                                <a href="@Url.Action("Details", "Productoes", new { id = item.idProducto })" class="btn-tooltip" data-toggle="tooltip" data-placement="bottom" title="" data-container="body" data-original-title="Ver">
+                                    <i class="material-icons" style="color:#27ae60">visibility</i>
+                                    <div class="ripple-container"></div>
+                                </a> |
+                                <a href="@Url.Action("Delete", "Productoes", new { id = item.idProducto })" class="btn-tooltip" data-toggle="tooltip" data-placement="bottom" title="" data-container="body" data-original-title="Eliminar">
+                                    <i class="material-icons" style="color:#f33c29">delete</i>
+                                    <div class="ripple-container"></div>
+                                </a>
+
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready( function () {
+        $('#example').DataTable();
+    } );
+</script>
+<!--
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Referencia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Precio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Proveedor1.Nit)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Referencia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Precio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Proveedor1.Nombre)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idProducto }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idProducto }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idProducto })
+        </td>
+    </tr>
+}
+
+</table>-->

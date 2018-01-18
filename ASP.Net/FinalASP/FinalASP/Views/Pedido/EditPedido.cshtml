@@ -1,0 +1,127 @@
+﻿@model FinalASP.Models.Pedido
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="apple-touch-icon" sizes="76x76" href="~/assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="~/assets/img/favicon.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Ingresar pedido - FinalASP</title>
+
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+
+    <!--     Fonts and icons     -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+
+    <!-- CSS Files -->
+    <link href="~/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/assets/css/material-kit.css" rel="stylesheet">
+
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link href="~/assets/css/demo.css" rel="stylesheet">
+
+
+</head>
+<body  style="background-color:white;">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="logo-container">
+                    <div class="logo">
+                        <img src="~/assets/img/logo.png" class="img-circle img-responsive img-raised" alt="Creative Tim Logo" rel="tooltip" title="" data-placement="bottom" data-html="true" data-original-title="<b>Drogas Project</b> administrador de pedidos a domicilio <b>Creado por TrixyTeam :D</b>">
+                    </div>
+                    <div class="brand">
+                        Drogas Project
+                    </div>
+                </div>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="~/Pedido/inicioPedido" data-toggle="tooltip" data-placement="bottom" title="Pedidos"><i class="material-icons">archive</i></a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>@Html.ActionLink("Cerrar Sesión", "Index", "Usuario")</li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+    <div class="container body-content" style="margin-top:100px;margin-bottom:20px;">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="card card-raised">
+                            <div class="header header-primary text-left">
+                                <h5 style="margin-left:30px;margin-bottom:5px;">Listado de pedidos</h5>
+                            </div>
+                            <div class="content col-md-10 col-md-offset-1">
+                                @using (Html.BeginForm())
+                                {
+                                    @Html.AntiForgeryToken()
+
+                                    <div class="form-horizontal">
+                                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                        @Html.HiddenFor(model => model.idPedido)
+
+                                        <div class="form-group">
+                                            @Html.LabelFor(model => model.Estado, htmlAttributes: new { @class = "control-label col-md-2" })
+                                            <div class="col-md-10">
+                                                @Html.EditorFor(model => model.Estado, new { htmlAttributes = new { @class = "form-control" } })
+                                                @Html.ValidationMessageFor(model => model.Estado, "", new { @class = "text-danger" })
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            @Html.LabelFor(model => model.Direccion, htmlAttributes: new { @class = "control-label col-md-2" })
+                                            <div class="col-md-10">
+                                                @Html.EditorFor(model => model.Direccion, new { htmlAttributes = new { @class = "form-control" } })
+                                                @Html.ValidationMessageFor(model => model.Direccion, "", new { @class = "text-danger" })
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            @Html.LabelFor(model => model.Productos, htmlAttributes: new { @class = "control-label col-md-2" })
+                                            <div class="col-md-10">
+                                                @Html.EditorFor(model => model.Productos, new { htmlAttributes = new { @class = "form-control" } })
+                                                @Html.ValidationMessageFor(model => model.Productos, "", new { @class = "text-danger" })
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            @Html.LabelFor(model => model.Cliente, "Cliente", htmlAttributes: new { @class = "control-label col-md-2" })
+                                            <div class="col-md-10">
+                                                @Html.DropDownList("Cliente", null, htmlAttributes: new { @class = "form-control" })
+                                                @Html.ValidationMessageFor(model => model.Cliente, "", new { @class = "text-danger" })
+                                            </div>
+                                        </div>
+                                        <div class="footer text-center col-md-offset-6" style="padding-bottom:20px;">
+                                            <a href="/Pedido/inicioPedido" class="btn btn-default">Volver</a>
+                                            <button class="btn btn-warning" value="Save" type="submit">Actualizar<div class="ripple-container"></div></button>
+                                        </div>
+
+                                    </div>
+                                }
+                                </div>
+                        </div>
+                            </div>
+                        </div>
+                    </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,193 @@
+﻿@model FinalASP.Models.Pedido
+
+
+@{
+    ViewBag.Title = "Ingresar Pedido";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="col-md-10 col-md-offset-1">
+    <div class="card card-raised">
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            <div class="header header-primary text-left">
+                <h5 style="margin-left:30px;margin-bottom:5px;">Realizar pedido</h5>
+                <small style="margin-left:30px;margin-top:1px;">Complete los campos</small>
+            </div>
+            <div class="content col-md-10 col-md-offset-1">
+
+                <!--<div class="input-group">
+                    <span class="input-group-addon">
+                        <i class="material-icons">assignment_ind</i>
+                    </span>
+                    <div class="form-group is-empty">
+                        @Html.EditorFor(model => model.Estado, new { htmlAttributes = new { @class = "form-control", @placeholder = "Estado" } })
+                        @Html.ValidationMessageFor(model => model.Estado, "", new { @class = "text-danger" })
+                        <span class="material-input"></span>
+                    </div>
+                </div>-->
+                <input type="text" value="Solicitado" id="Estado" name="Estado" style="display:none" />
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <i class="material-icons">directions</i>
+                    </span>
+                    <div class="form-group is-empty">
+                        @Html.EditorFor(model => model.Direccion, new { htmlAttributes = new { @class = "form-control", @placeholder = "Direccion" } })
+                        @Html.ValidationMessageFor(model => model.Direccion, "", new { @class = "text-danger" })
+                        <span class="material-input"></span>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <i class="material-icons">timer</i>
+                    </span>
+                    <div class="form-group is-empty">
+                        @Html.EditorFor(model => model.Productos, new { htmlAttributes = new { @class = "form-control", @placeholder = "Productos" } })
+                        <a href="#myModal" data-toggle="modal" data-target="#myModal">Agregar productos</a>
+                        @Html.ValidationMessageFor(model => model.Productos, "", new { @class = "text-danger" })
+                        <span class="material-input"></span>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <i class="material-icons">loyalty</i>
+                    </span>
+                    <div class="form-group is-empty">
+                        @Html.DropDownList("Cliente", null, htmlAttributes: new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Cliente, "", new { @class = "text-danger" })
+                        <span class="material-input"></span>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="footer text-center col-md-offset-6" style="padding-bottom:20px;">
+                <a href="/Pedido" class="btn btn-default">Volver</a>
+                <button class="btn btn-success" type="submit">Confirmar<div class="ripple-container"></div></button>
+            </div>
+
+        }
+    </div>
+</div>
+<!-- Modal Core -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Agregar Productos</h4>
+            </div>
+            <div class="modal-body">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="row">
+                        <div class="form-group">
+                            <input type="text" class="form-control buscarProducto" placeholder="Ingrese el nombre del producto" id="txtProductoBuscar" />
+                            <span class="material-input"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col--md-10">
+                        <table class="table table-responsive">
+                            <thead>
+                                <tr>
+                                    <th>Referencia</th>
+                                    <th>Nombre</th>
+                                    <th>Precio</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default btn-simple" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-info btn-simple">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!--
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Pedido</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Estado, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Estado, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Estado, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Direccion, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Direccion, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Direccion, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Productos, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Productos, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Productos, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Cliente, "Cliente", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("Cliente", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Cliente, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>-->
+<script src="~/assets/js/jquery.min.js" type="text/javascript"></script>
+<script>
+    $(".buscarProducto").keyup(function () {
+        var producto = $("#txtProductoBuscar").val();
+        $.getJSON("/Productoes/Buscar", {producto:producto}, function (responseText) {
+            alert(responseText.Producto);
+            console.log(responseText);
+            if (responseText != "false") {
+
+
+
+            }
+
+        });
+
+    });
+</script>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

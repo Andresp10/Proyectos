@@ -1,0 +1,81 @@
+﻿@model FinalASP.Models.Proveedor
+
+@{
+    ViewBag.Title = "Detalles del proveedor";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="col-md-10 col-md-offset-1">
+    <div class="card card-raised">
+        <div class="header header-primary text-left">
+            <h5 style="margin-left:30px;margin-bottom:5px;">Detalles del Proveedor</h5>
+        </div>
+        <div class="content col-md-10 col-md-offset-1">
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Nit)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Nit)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Nombre)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Nombre)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Direccion)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Direccion)
+                </dd>
+
+            </dl>
+        </div>
+        <div class="footer text-center col-md-offset-6" style="padding-bottom:20px;">
+            <a href="/Proveedors" class="btn btn-default">Volver</a>
+            <a href="@Url.Action("Edit", "Proveedors", new { id = Model.idProveedor })" class="btn btn-warning">Editar</a>
+        </div>
+    </div>
+</div>
+
+<!--
+<div>
+    <h4>Proveedor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Direccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Direccion)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idProveedor }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>-->
