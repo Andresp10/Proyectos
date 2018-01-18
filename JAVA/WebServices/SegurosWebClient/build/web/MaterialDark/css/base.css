@@ -1,0 +1,30 @@
+/*///////////////////////// Estilos login.html /////////////////////////*/
+.container-usuario{
+    margin: 0;
+    padding: 10px;
+    width: 600px;
+    background-color: rgba(255,255,255,.87);
+    border-radius: 4px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #333;
+    padding-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.container-usuario label{
+    color: #333;
+}
+/*/////////////////////////// Ver jugador //////////////////////////////*/
+.titulo{
+    
+    padding-top: 500px;
+    background-color: yellow;
+}
+.tituloJugador{
+    
+    
+}

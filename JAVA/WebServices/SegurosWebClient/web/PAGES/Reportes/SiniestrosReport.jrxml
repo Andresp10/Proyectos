@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="956975e1-3c8e-4674-9504-7477645b754b">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#8FAFCC">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#CFDBE6">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#8FAFCC">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#CFDBE6">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TH" mode="Opaque" backcolor="#8FAFCC">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_CH" mode="Opaque" backcolor="#CFDBE6">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_TH" mode="Opaque" backcolor="#8FAFCC">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_CH" mode="Opaque" backcolor="#CFDBE6">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_TH" mode="Opaque" backcolor="#8FAFCC">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_CH" mode="Opaque" backcolor="#CFDBE6">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8_TH" mode="Opaque" backcolor="#8FAFCC">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8_CH" mode="Opaque" backcolor="#CFDBE6">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9_TH" mode="Opaque" backcolor="#8FAFCC">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9_CH" mode="Opaque" backcolor="#CFDBE6">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 10">
+		<box>
+			<pen lineWidth="1.0" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 10_TH" mode="Opaque" backcolor="#0088FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 10_CH" mode="Opaque" backcolor="#E6F3FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 10_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<subDataset name="hombres" uuid="8e4a4415-445b-4a59-ab72-141f8930e6fc">
+		<queryString>
+			<![CDATA[Select Count(*) as numero_siniestros, Count(Genero='Masculino') as Hombres, Count(Genero='Femenino') as Mujeres  FROM segurosxyz.Siniestro INNER join segurosxyz.Afiliado ON segurosxyz.Siniestro.Afiliado = segurosxyz.Afiliado.idAfiliado]]>
+		</queryString>
+		<field name="numero_siniestros" class="java.lang.Long"/>
+		<field name="Hombres" class="java.lang.Long"/>
+		<field name="Mujeres" class="java.lang.Long"/>
+		<variable name="Total" class="java.lang.String"/>
+		<variable name="PorcentajeHombre" class="java.lang.String"/>
+		<variable name="PorcentajeMujer" class="java.lang.String"/>
+		<variable name="PorcentajeTotal" class="java.lang.String"/>
+		<group name="Hombres">
+			<groupExpression><![CDATA[$F{Hombres}]]></groupExpression>
+		</group>
+		<group name="Mujeres">
+			<groupExpression><![CDATA[$F{Mujeres}]]></groupExpression>
+		</group>
+	</subDataset>
+	<queryString language="SQL">
+		<![CDATA[SELECT COUNT(*) as numero_afiliados FROM afiliado]]>
+	</queryString>
+	<field name="numero_afiliados" class="java.lang.Long"/>
+	<variable name="numero_afiliados_1" class="java.lang.Integer" resetType="Column" calculation="Count">
+		<variableExpression><![CDATA[$F{numero_afiliados}]]></variableExpression>
+	</variable>
+	<variable name="numero_afiliados_SUM" class="java.lang.Long" calculation="Sum">
+		<variableExpression><![CDATA[$F{numero_afiliados}]]></variableExpression>
+	</variable>
+	<variable name="numero_mujeres_1" class="java.lang.Long" resetType="Column" calculation="Sum">
+		<variableExpression><![CDATA[]]></variableExpression>
+	</variable>
+	<variable name="numero_afiliados_SUM_1" class="java.lang.Long" calculation="Sum">
+		<variableExpression><![CDATA[$F{numero_afiliados}]]></variableExpression>
+	</variable>
+	<variable name="numero_afiliados_SUM_2" class="java.lang.Long" calculation="Sum">
+		<variableExpression><![CDATA[$F{numero_afiliados}]]></variableExpression>
+	</variable>
+	<variable name="TotalSiniestros" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="132" y="10" width="267" height="48" uuid="d0831a1b-268d-498e-bba4-2af681150b7a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="30"/>
+				</textElement>
+				<text><![CDATA[Seguros XYZ]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="51" y="0" width="100" height="35" uuid="0da9ff36-42ee-4e06-9684-0aae718eefe3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Total Afiliados]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="218" y="0" width="100" height="35" uuid="744382de-1a17-42ce-a28c-1012dfdea322"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Total Siniestros]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="365" y="0" width="160" height="35" uuid="c38cda34-87db-4d94-8468-5984c0832ce4"/>
+				<textElement verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Porcentaje En Siniestros]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<textField>
+				<reportElement x="51" y="0" width="100" height="35" uuid="f89721f1-ef96-4543-90b9-6fda788ab350"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{numero_afiliados}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="138" splitType="Stretch">
+			<componentElement>
+				<reportElement key="table 10" style="table 10" x="139" y="0" width="270" height="138" uuid="0b8da4cb-7134-4801-b7e6-0cf9a135937d"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="hombres" uuid="8a7107fb-ed72-4732-9304-23d7b731de79">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="90" uuid="41b4df9c-7a19-4f7b-8334-f7314f4a85fc">
+						<jr:tableHeader style="table 10_TH" height="36" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" forecolor="#FFFFFF" uuid="e9d92634-8545-4193-99ca-ec908ef6cd6f"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="16" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Genero]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:columnHeader style="table 10_CH" height="35" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="35" uuid="9e372166-b1b5-48c6-9ed1-c86e4fa34563"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="12"/>
+								</textElement>
+								<text><![CDATA[Masculino]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 10_CH" height="33" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="33" uuid="a264515a-88f1-437f-9244-04784e895326"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="12"/>
+								</textElement>
+								<text><![CDATA[Total]]></text>
+							</staticText>
+						</jr:columnFooter>
+						<jr:detailCell style="table 10_TD" height="29" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="27" uuid="58f5cfaf-7c28-4548-a23c-c28dbd1ba9a5"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="12"/>
+								</textElement>
+								<text><![CDATA[Femenino]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="8719e472-0dee-4ad2-abe6-89305aa3829e">
+						<jr:tableHeader style="table 10_TH" height="36" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" forecolor="#FFFFFF" uuid="7a1a5b2c-6b8f-4d7a-b9be-78ccbe0f94f1"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="16" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Cantidad]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:columnHeader style="table 10_CH" height="35" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="35" uuid="5e6f7312-63a1-4a3d-bd9d-b12111ad13cc"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{Hombres}]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 10_CH" height="33" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="33" uuid="08736e67-eb2c-46fb-9ea7-9356cb54ca12"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{Hombres}+$F{Mujeres}]]></textFieldExpression>
+							</textField>
+						</jr:columnFooter>
+						<jr:detailCell style="table 10_TD" height="29" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="29" uuid="8a66c570-5c92-4cd2-ad74-92f624aa4c92"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{Mujeres}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="7267ec0e-80fa-4578-9fda-925960aa734a">
+						<jr:tableHeader style="table 10_TH" height="36" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" forecolor="#FFFFFF" uuid="94111198-1145-47c1-930b-7d27c69ee8d3"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="16" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Porcentaje]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:columnHeader style="table 10_CH" height="35" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="35" uuid="07130d59-3574-4e06-ba08-e90738fcfd3e"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[($F{Hombres}*100)/($F{Hombres}+$F{Mujeres})]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 10_CH" height="33" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="33" uuid="f18d7c4c-a101-474d-9aa7-5f291155ec37"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[100]]></textFieldExpression>
+							</textField>
+						</jr:columnFooter>
+						<jr:detailCell style="table 10_TD" height="29" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="29" uuid="d1a4b4d6-682c-46cd-bd34-f2945f259e22"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{Mujeres}*100/($F{Hombres}+$F{Mujeres})]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch">
+			<textField>
+				<reportElement x="419" y="17" width="80" height="20" uuid="243d788d-54f3-402b-83c7-994ce3714047"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Pagina "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="499" y="17" width="40" height="20" uuid="7f93799c-4086-4bc7-83f9-91ce623f7ad7"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

@@ -1,0 +1,323 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://WebServices/" xmlns:ns1="http://jaxb.dev.java.net/array" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://WebServices/">
+
+<xs:import namespace="http://jaxb.dev.java.net/array" schemaLocation="http://localhost:8080/SegurosService/WSSeguros?xsd=1"/>
+
+<xs:element name="BuscarDatosCliente" type="tns:BuscarDatosCliente"/>
+
+<xs:element name="BuscarDatosClienteResponse" type="tns:BuscarDatosClienteResponse"/>
+
+<xs:element name="Cliente" type="tns:Cliente"/>
+
+<xs:element name="ClienteBuscar" type="tns:ClienteBuscar"/>
+
+<xs:element name="ClienteBuscarResponse" type="tns:ClienteBuscarResponse"/>
+
+<xs:element name="ClienteResponse" type="tns:ClienteResponse"/>
+
+<xs:element name="Consulta" type="tns:Consulta"/>
+
+<xs:element name="ConsultaAll" type="tns:ConsultaAll"/>
+
+<xs:element name="ConsultaAllResponse" type="tns:ConsultaAllResponse"/>
+
+<xs:element name="ConsultaResponse" type="tns:ConsultaResponse"/>
+
+<xs:element name="EditarPoliza" type="tns:EditarPoliza"/>
+
+<xs:element name="EditarPolizaResponse" type="tns:EditarPolizaResponse"/>
+
+<xs:element name="EditarSiniestro" type="tns:EditarSiniestro"/>
+
+<xs:element name="EditarSiniestroResponse" type="tns:EditarSiniestroResponse"/>
+
+<xs:element name="FuncionarioAll" type="tns:FuncionarioAll"/>
+
+<xs:element name="FuncionarioAllResponse" type="tns:FuncionarioAllResponse"/>
+
+<xs:element name="FuncionarioCreate" type="tns:FuncionarioCreate"/>
+
+<xs:element name="FuncionarioCreateResponse" type="tns:FuncionarioCreateResponse"/>
+
+<xs:element name="GetDatosFuncionaroi" type="tns:GetDatosFuncionaroi"/>
+
+<xs:element name="GetDatosFuncionaroiResponse" type="tns:GetDatosFuncionaroiResponse"/>
+
+<xs:element name="Login" type="tns:Login"/>
+
+<xs:element name="LoginResponse" type="tns:LoginResponse"/>
+
+<xs:element name="PolizaBuscar" type="tns:PolizaBuscar"/>
+
+<xs:element name="PolizaBuscarResponse" type="tns:PolizaBuscarResponse"/>
+
+<xs:element name="PolizaCreate" type="tns:PolizaCreate"/>
+
+<xs:element name="PolizaCreateResponse" type="tns:PolizaCreateResponse"/>
+
+<xs:element name="SiniestroAll" type="tns:SiniestroAll"/>
+
+<xs:element name="SiniestroAllResponse" type="tns:SiniestroAllResponse"/>
+
+<xs:element name="SiniestroBuscar" type="tns:SiniestroBuscar"/>
+
+<xs:element name="SiniestroBuscarResponse" type="tns:SiniestroBuscarResponse"/>
+
+<xs:element name="SiniestroCreate" type="tns:SiniestroCreate"/>
+
+<xs:element name="SiniestroCreateResponse" type="tns:SiniestroCreateResponse"/>
+
+<xs:complexType name="EditarSiniestro">
+<xs:sequence>
+<xs:element name="arg0" type="tns:siniestro" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="siniestro">
+<xs:sequence>
+<xs:element name="afiliado" type="tns:afiliado" minOccurs="0"/>
+<xs:element name="fecha" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="idSiniestro" type="xs:int"/>
+<xs:element name="tipo" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="afiliado">
+<xs:sequence>
+<xs:element name="apellido" type="xs:string" minOccurs="0"/>
+<xs:element name="ciudad" type="xs:string" minOccurs="0"/>
+<xs:element name="departamento" type="xs:string" minOccurs="0"/>
+<xs:element name="direccion" type="xs:string" minOccurs="0"/>
+<xs:element name="documento" type="xs:string" minOccurs="0"/>
+<xs:element name="estado" type="xs:string" minOccurs="0"/>
+<xs:element name="estadoCivil" type="xs:string" minOccurs="0"/>
+<xs:element name="fechaNacimiento" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="genero" type="xs:string" minOccurs="0"/>
+<xs:element name="idAfiliado" type="xs:int"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="EditarSiniestroResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="FuncionarioAll">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="FuncionarioAllResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:funcionario" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="funcionario">
+<xs:sequence>
+<xs:element name="APellido" type="xs:string" minOccurs="0"/>
+<xs:element name="contrasenia" type="xs:string" minOccurs="0"/>
+<xs:element name="documento" type="xs:string" minOccurs="0"/>
+<xs:element name="idFuncionario" type="xs:int"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+<xs:element name="tipo" type="xs:string" minOccurs="0"/>
+<xs:element name="usuario" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Cliente">
+<xs:sequence>
+<xs:element name="Accion" type="xs:string" minOccurs="0"/>
+<xs:element name="Documento" type="xs:string" minOccurs="0"/>
+<xs:element name="Nombre" type="xs:string" minOccurs="0"/>
+<xs:element name="Apellido" type="xs:string" minOccurs="0"/>
+<xs:element name="FechaNacimiento" type="xs:string" minOccurs="0"/>
+<xs:element name="Genero" type="xs:string" minOccurs="0"/>
+<xs:element name="Departamento" type="xs:string" minOccurs="0"/>
+<xs:element name="Ciudad" type="xs:string" minOccurs="0"/>
+<xs:element name="Direccion" type="xs:string" minOccurs="0"/>
+<xs:element name="EstadoCivil" type="xs:string" minOccurs="0"/>
+<xs:element name="Estado" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ClienteResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ConsultaAll">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="ConsultaAllResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:afiliado" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="SiniestroBuscar">
+<xs:sequence>
+<xs:element name="idAfiliado" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="SiniestroBuscarResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:siniestro" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="PolizaBuscar">
+<xs:sequence>
+<xs:element name="idAfiliado" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="PolizaBuscarResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:poliza" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="poliza">
+<xs:sequence>
+<xs:element name="afiliado" type="tns:afiliado" minOccurs="0"/>
+<xs:element name="idPoliza" type="xs:int"/>
+<xs:element name="tipo" type="xs:string" minOccurs="0"/>
+<xs:element name="valor" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetDatosFuncionaroi">
+<xs:sequence>
+<xs:element name="Usuario" type="xs:string" minOccurs="0"/>
+<xs:element name="Contrasenia" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetDatosFuncionaroiResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:funcionario" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="EditarPoliza">
+<xs:sequence>
+<xs:element name="Tipo" type="xs:string" minOccurs="0"/>
+<xs:element name="Valor" type="xs:double"/>
+<xs:element name="Afiliado" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="EditarPolizaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="SiniestroAll">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="SiniestroAllResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:siniestro" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Consulta">
+<xs:sequence>
+<xs:element name="idAfiliado" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ConsultaResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:anyTypeArray" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="SiniestroCreate">
+<xs:sequence>
+<xs:element name="Fecha" type="xs:string" minOccurs="0"/>
+<xs:element name="Tipo" type="xs:string" minOccurs="0"/>
+<xs:element name="Afiliado" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="SiniestroCreateResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="PolizaCreate">
+<xs:sequence>
+<xs:element name="Tipo" type="xs:string" minOccurs="0"/>
+<xs:element name="Valor" type="xs:double"/>
+<xs:element name="Afiliado" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="PolizaCreateResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="FuncionarioCreate">
+<xs:sequence>
+<xs:element name="Documento" type="xs:string" minOccurs="0"/>
+<xs:element name="Nombre" type="xs:string" minOccurs="0"/>
+<xs:element name="Apellido" type="xs:string" minOccurs="0"/>
+<xs:element name="Usuario" type="xs:string" minOccurs="0"/>
+<xs:element name="Contrasenia" type="xs:string" minOccurs="0"/>
+<xs:element name="Tipo" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="FuncionarioCreateResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="BuscarDatosCliente">
+<xs:sequence>
+<xs:element name="idAfiliado" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="BuscarDatosClienteResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:afiliado" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Login">
+<xs:sequence>
+<xs:element name="Usuario" type="xs:string" minOccurs="0"/>
+<xs:element name="Contrasenia" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="LoginResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ClienteBuscar">
+<xs:sequence>
+<xs:element name="Documento" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ClienteBuscarResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

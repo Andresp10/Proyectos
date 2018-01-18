@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>funcionario</servlet-name>
+        <servlet-class>Controlador.funcionario</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>cliente</servlet-name>
+        <servlet-class>Controlador.cliente</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>siniestro</servlet-name>
+        <servlet-class>Controlador.siniestro</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>poliza</servlet-name>
+        <servlet-class>Controlador.poliza</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>funcionario</servlet-name>
+        <url-pattern>/funcionario/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>cliente</servlet-name>
+        <url-pattern>/cliente/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>siniestro</servlet-name>
+        <url-pattern>/siniestro/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>poliza</servlet-name>
+        <url-pattern>/poliza/*</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
